@@ -222,7 +222,11 @@ document.getElementById(
 "estado-" + codigo
 ).innerHTML =
 "🎉 ¡Felicidades!<br>Código revelado";
-
+        
+gtag('event','revelar_cupon',{
+  cupon: codigo
+});
+        
 copiar(codigo,enlace);
 
     }
