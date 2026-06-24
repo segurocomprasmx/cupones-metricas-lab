@@ -251,17 +251,23 @@ enlace,
 }
     function mostrar(seccion){
 
+gtag('event','abrir_seccion',{
+  seccion:seccion
+});
+
 document.getElementById("diarios").style.display="none";
 document.getElementById("bancarios").style.display="none";
 document.getElementById("secretos").style.display="none";
 document.getElementById("aprende").style.display="none";
 
 document.getElementById(seccion).style.display="block";
+
 localStorage.setItem(
 "ultimaSeccion",
 seccion
 );
-    }
+
+}
     async function cargarCupones(){
 
   const respuesta =
