@@ -240,15 +240,6 @@ enlace,
 );
 
 },500);
-    function copiarBanco(codigo,enlace,banco){
-
-gtag('event','copiar_bancario',{
-  banco:banco
-});
-
-copiar(codigo,enlace);
-
-}
 
   const toast = document.getElementById("mensajeCopiado");
 
@@ -258,6 +249,15 @@ copiar(codigo,enlace);
     toast.classList.remove("mostrar");
   },2500);
 }
+    function copiarBanco(codigo,enlace,banco){
+
+  gtag('event','copiar_bancario',{
+    banco:banco
+  });
+
+  copiar(codigo,enlace);
+
+    }
     function mostrar(seccion){
 
 gtag('event','abrir_seccion',{
