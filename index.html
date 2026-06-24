@@ -268,16 +268,7 @@ seccion
 );
 
 }
-    function copiarBanco(codigo,enlace,banco){
-
-gtag('event','copiar_bancario',{
-  banco:banco
-});
-
-copiar(codigo,enlace);
-
-}
-    async function cargarCupones(){
+        async function cargarCupones(){
 
   const respuesta =
   await fetch("cupones.txt");
@@ -410,7 +401,7 @@ contenedor.innerHTML += `
 <p class="no-select">
 <b>${codigo}</b>
 </p>
-<button onclick="copiarBanco('${codigo}','${enlace}','${banco}')">
+<button onclick="copiar('${codigo}','${enlace}')">
 
 📋 Copiar Cupón
 
